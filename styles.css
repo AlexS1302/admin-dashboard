@@ -1,0 +1,41 @@
+/* colours:
+blue: #1992d4 
+yellow:#f0b429
+white:#ffffff 
+grey: #e2e8f0 */
+
+body, html {
+    height: 100vh;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-rows: 0.5fr 2fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    height: 100vh;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #1992d4;
+}
+
+.header {
+    grid-area: header;
+    background-color: #ffffff;
+}
+
+.main {
+    grid-area: main;
+    background-color: #e2e8f0;
+}
+
+
+.grid-container > div {
+    padding: 10px;
+}
+
