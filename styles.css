@@ -4,9 +4,15 @@ yellow:#f0b429
 white:#ffffff 
 grey: #e2e8f0 */
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
 body, html {
     height: 100vh;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .grid-container {
@@ -43,7 +49,7 @@ body, html {
     transition-duration: 0.4s;
 }
 
-.options:hover, .options-header:hover {
+.options:hover, .options-header:hover, button:hover, .bell:hover, .magnify:hover {
     transform: scale(1.1);
 }
 
@@ -74,11 +80,137 @@ a {
     color: #ffffff;
 }
 
+.credit {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.credit a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.credit:hover {
+    transform: scale(1.03);
+}
+
+
 /* Header */
 
 .header {
     grid-area: header;
     background-color: #ffffff;
+    display: grid;
+    grid-template: 1.5fr 2.5fr / 5fr 3fr;
+    padding: 1rem 3rem 0.5rem 3rem;
+}
+
+.search, .profileTop, .profileBottom, .buttons { 
+    min-width: 500px;
+}
+
+.magnify {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition-duration: 0.4s;
+}
+
+.bell {
+    width: 20px;
+    height: 20px;
+    transition-duration: 0.4s;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.search input {
+    background-color: #e2e8f0;
+    border: 0px solid;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem;
+    margin-right: 30px;
+    flex-grow: 1;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #1992d4
+}
+
+.profileTop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.profileBottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.name {
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting {
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+.profileTop p{
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.pfp-small {
+    width: 50px;
+    height: 50px;
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    padding-right: 25px;
+}
+
+button {
+    padding: 0.6rem 1.5rem;
+    background-color: #1992d4;
+    color: #ffffff;
+    font-weight: 700;
+    border: 0px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: 0.4s;
 }
 
 /* Main */
@@ -87,5 +219,7 @@ a {
     grid-area: main;
     background-color: #e2e8f0;
 }
+
+
 
 
