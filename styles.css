@@ -49,7 +49,7 @@ body, html {
     transition-duration: 0.4s;
 }
 
-.options:hover, .options-header:hover, button:hover, .bell:hover, .magnify:hover {
+.options:hover, .options-header:hover, button:hover, .bell:hover, .magnify:hover, .project-icons img:hover {
     transform: scale(1.1);
 }
 
@@ -80,6 +80,7 @@ a {
     color: #ffffff;
 }
 
+
 .credit {
     display: flex;
     align-items: flex-end;
@@ -108,6 +109,7 @@ a {
     display: grid;
     grid-template: 1.5fr 2.5fr / 5fr 3fr;
     padding: 1rem 3rem 0.5rem 3rem;
+    box-shadow: 0px 2px 5px  rgba(0, 0, 0, 0.164);
 }
 
 .search, .profileTop, .profileBottom, .buttons { 
@@ -217,9 +219,111 @@ button {
 
 .main {
     grid-area: main;
+    display: grid;
     background-color: #e2e8f0;
 }
 
 
+.projects {
+    display: grid;
+    grid-template: 30px repeat(2, 1fr) / repeat(3, minmax(300px, 33%));
+    gap: 30px;
+    padding: 0.2rem 1.5rem 1.5rem;
+}
+
+.projects p{
+    grid-column: 1/4;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.card.trending{
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cardContent {
+    padding: 10px;
+    width: 320px;
+    max-width: 320px;
+}
+
+.cardContent h6{
+    font-size: 1.2em;
+    margin: 5px 0px 5px 0px;
+}
+
+.feeds {
+    display: grid;
+    grid-template: 30px 1fr 30px 1fr / 1fr;
+    padding: 0.2rem 1.5rem 1.5rem;
+    gap: 30px;
+    grid-column: 4/5;
+}
+
+.feeds p{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.cardContent p{
+    font-size: 0.8em;
+    margin: 3px 0px 20px 0px;
+}
 
 
+.border {
+    border: 1px solid rgba(0, 0, 0, 0.164);;
+    border-style: none none solid none;
+}
+
+.project-text {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.project-text h6 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.project-text p {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+
+.project-icons {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.project-icons img{
+    transition: 0.4s;
+}
+
+.mini-pfp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 20px;
+}
+
+.textPfp p{
+    font-size: 1em;
+    margin: 0;
+}
